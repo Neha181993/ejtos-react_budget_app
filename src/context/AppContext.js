@@ -581,7 +581,7 @@ Persisting Values Across Renders:
 
     /* 
        1. Execution starts with App.js which is importing AppContext.js in it
-	   2. AppContext.js :- In this initialstates of the components attributes are defined which is being passed to the
+	2. AppContext.js :- In this initialstates of the components attributes are defined which is being passed to the
           child components, also createcontext being created and passed through Appprovider to 
           it's child components. Along with CreateContext, Initialstates - various reducer actions are defined 
           and passed to it's child components. 
@@ -589,6 +589,8 @@ Persisting Values Across Renders:
        
           Budget.js(budget on app) , ExpenseTotal.js(Sepends so for on app) and Remaining.js(Remaining part on the application) are defined at the top as the top elemnts. 
           ExpenseItems.js , ExpenseList.js and  are defined the middle part. 
+	4. If state changes of one component needs to be added to other components, that component can be called using usecontext of those components along with dispatch method, here 
+ 	   dispatch method will send a text which needed for rducer. Dispatch method is defined in main app context along with reducer function. 
 
 */
 
